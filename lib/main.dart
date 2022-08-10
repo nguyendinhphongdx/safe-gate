@@ -13,6 +13,7 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();
 }
 
+// ignore: deprecated_member_use
 late final RemoteConfig? remoteConfig;
 
 late AndroidNotificationChannel channel;

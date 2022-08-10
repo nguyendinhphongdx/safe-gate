@@ -24,6 +24,7 @@ class HttpConstant {
   static const String DEVICE_ID = '12358695456';
   static const String DEVICE_ID_2 = '72622743108161618';
   static const String DEVICE_ID_3 = '72622743041052754';
+  
 }
 
 class CodeConstant {
