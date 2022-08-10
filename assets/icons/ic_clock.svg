@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+  <g id="Group_13052" data-name="Group 13052" transform="translate(-286 -109)" opacity="0.6">
+    <g id="Icon_feather-pause-circle" data-name="Icon feather-pause-circle" transform="translate(284.5 107.5)">
+      <path id="Path_18548" data-name="Path 18548" d="M24,1.5a22.506,22.506,0,0,1,8.758,43.231A22.505,22.505,0,0,1,15.242,3.269,22.36,22.36,0,0,1,24,1.5Zm0,42A19.5,19.5,0,1,0,4.5,24,19.522,19.522,0,0,0,24,43.5Z" transform="translate(0 0)" fill="#fff"/>
+    </g>
+    <path id="Icon_material-timer" data-name="Icon material-timer" d="M19.478,1.5H11.989V4h7.489ZM14.485,17.726h2.5V10.237h-2.5Zm10.023-8.25L26.28,7.7a13.79,13.79,0,0,0-1.76-1.76L22.748,7.716a11.233,11.233,0,1,0,1.76,1.76ZM15.733,25.215a8.737,8.737,0,1,1,8.737-8.737A8.731,8.731,0,0,1,15.733,25.215Z" transform="translate(292.767 117.144)" fill="#fff"/>
+  </g>
+</svg>

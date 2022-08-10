@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="41" viewBox="0 0 41 41">
+  <defs>
+    <filter id="Ellipse_423" x="0" y="0" width="41" height="41" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_424" x="3" y="3" width="35" height="35" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_13740" data-name="Group 13740" transform="translate(-15 -99)">
+    <g transform="matrix(1, 0, 0, 1, 15, 99)" filter="url(#Ellipse_423)">
+      <g id="Ellipse_423-2" data-name="Ellipse 423" transform="translate(9 6)" fill="none" stroke="#fff" stroke-width="1">
+        <circle cx="11.5" cy="11.5" r="11.5" stroke="none"/>
+        <circle cx="11.5" cy="11.5" r="11" fill="none"/>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 15, 99)" filter="url(#Ellipse_424)">
+      <circle id="Ellipse_424-2" data-name="Ellipse 424" cx="8.5" cy="8.5" r="8.5" transform="translate(12 9)" fill="#2d93ee"/>
+    </g>
+  </g>
+</svg>

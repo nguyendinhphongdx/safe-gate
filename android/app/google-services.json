@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "467637914367",
+    "project_id": "safegate-54465",
+    "storage_bucket": "safegate-54465.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467637914367:android:5cf410be6b5387f6c79aca",
+        "android_client_info": {
+          "package_name": "com.xtel.safegate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467637914367-m6orklk97uoi0dfbrcvbcohh7nvov7ka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.xtel.safegate",
+            "certificate_hash": "1fe7f06e93174a2e66e2988a5db3557c14a7481c"
+          }
+        },
+        {
+          "client_id": "467637914367-5m5gukqef94ebtgh3al9mogr8re0i3cq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBezNMYNrH63rYHqbfKFwBXm9uTgsw2Bro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467637914367-5m5gukqef94ebtgh3al9mogr8re0i3cq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "467637914367-u5nc2ce23c00htmm93rttpib3p02qclf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.xtel.safegate"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
