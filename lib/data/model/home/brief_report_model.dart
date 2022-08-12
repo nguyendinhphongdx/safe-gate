@@ -1,8 +1,3 @@
-/// connections : 10
-/// violatecount : 3
-/// bandwidth : 350
-/// spenttime : 2.5
-
 class BriefReportModel {
   BriefReportModel({
     this.connections,

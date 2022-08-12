@@ -1,10 +1,13 @@
 import 'package:base_pm2/common/core/app_core.dart';
 import 'package:base_pm2/common/resource/app_resource.dart';
+import 'package:base_pm2/common/resource/keylanguage_resource/key_language.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HeaderPicker extends StatefulWidget {
-  const HeaderPicker({Key? key, this.month, this.year, this.onSelected}) : super(key: key);
+  const HeaderPicker({Key? key, this.month, this.year, this.onSelected})
+      : super(key: key);
   final int? month;
   final int? year;
   final Function(int month, int year)? onSelected;
@@ -32,7 +35,7 @@ class _HeaderPickerState extends State<HeaderPicker> {
       children: [
         Row(
           children: [
-       /*     InkWell(
+            /*     InkWell(
               onTap: () => monthPopup.currentState?.showButtonMenu(),
               child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
@@ -70,7 +73,7 @@ class _HeaderPickerState extends State<HeaderPicker> {
                   padding: EdgeInsets.zero,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
             ),*/
-          /*  const SizedBox(width: 4),
+            /*  const SizedBox(width: 4),
             InkWell(
               onTap: () => yearPopup.currentState?.showButtonMenu(),
               child: Container(
@@ -105,13 +108,22 @@ class _HeaderPickerState extends State<HeaderPicker> {
                   itemBuilder: _buildYearMenu,
                   onSelected: _onYearSelected,
                   padding: EdgeInsets.zero,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8))),
             ),
           ],
         ),
         const SizedBox(height: 12),
         Row(
-          children: ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'].mapIndexed<Widget>(_buildItem).toList(),
+          children: [
+            KeyLanguage.mon.tr,
+            KeyLanguage.tue.tr,
+            KeyLanguage.wed.tr,
+            KeyLanguage.thu.tr,
+            KeyLanguage.fri.tr,
+            KeyLanguage.sat.tr,
+            KeyLanguage.sun.tr
+          ].mapIndexed<Widget>(_buildItem).toList(),
         ),
       ],
     );
@@ -125,10 +137,13 @@ class _HeaderPickerState extends State<HeaderPicker> {
         alignment: Alignment.center,
         decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: index == 6 ? ColorResource.bottomBarItem : ColorResource.secondPrimary.withOpacity(.6)),
+            color: index == 6
+                ? ColorResource.bottomBarItem
+                : ColorResource.secondPrimary.withOpacity(.6)),
         child: Text(
           element,
-          style: appStyle.textTheme.bodyText1?.copyWith(fontWeight: FontWeight.w600),
+          style: appStyle.textTheme.bodyText1
+              ?.copyWith(fontWeight: FontWeight.w600),
         ),
       ),
     );
@@ -140,8 +155,9 @@ class _HeaderPickerState extends State<HeaderPicker> {
       items.add(PopupMenuItem(
           value: i,
           child: Text(
-            'Tháng $i',
-            style: appStyle.textTheme.bodyText1?.apply(color: ColorResource.tabIndicator),
+            KeyLanguage.month.tr + ' $i',
+            style: appStyle.textTheme.bodyText1
+                ?.apply(color: ColorResource.tabIndicator),
           ),
           height: 35));
     }
@@ -154,8 +170,9 @@ class _HeaderPickerState extends State<HeaderPicker> {
       items.add(PopupMenuItem(
           value: DateTime.now().year - i,
           child: Text(
-            'Năm ${DateTime.now().year - i}',
-            style: appStyle.textTheme.bodyText1?.apply(color: ColorResource.tabIndicator),
+            KeyLanguage.year.tr + ' ${DateTime.now().year - i}',
+            style: appStyle.textTheme.bodyText1
+                ?.apply(color: ColorResource.tabIndicator),
           ),
           height: 35));
     }

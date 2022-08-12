@@ -97,9 +97,9 @@ class LoginPage extends GetWidget<LoginController> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Obx(() => ImageViewer(
-                                  controller.currentArena.value == '+84'
+                                  controller.currentArena.value == CountryCode.VN_CODE
                                       ? ImageResource.vn
-                                      : controller.currentArena.value == '+44'
+                                      : controller.currentArena.value == CountryCode.UK_CODE
                                           ? ImageResource.ic_uk
                                           : ImageResource.ic_us,
                                   width: 36,
@@ -231,7 +231,7 @@ class LoginPage extends GetWidget<LoginController> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Chưa có tài khoản? ',
+                        Text(KeyLanguage.doSignUpAccount.tr,
                             style: appStyle.textTheme.bodyText1
                                 ?.copyWith(fontSize: 16)),
                         Stack(
@@ -242,7 +242,7 @@ class LoginPage extends GetWidget<LoginController> {
                             //         border: Border(bottom: BorderSide(width: 1, color: Colors.white))),
                             //     child: Text('Đăng ký',
                             //         style: appStyle.textTheme.bodyText1?.copyWith(fontSize: 16))),
-                            Text('Đăng ký',
+                            Text(KeyLanguage.signUp.tr,
                                 style: appStyle.textTheme.bodyText1?.copyWith(
                                     fontSize: 16,
                                     decoration: TextDecoration.underline,

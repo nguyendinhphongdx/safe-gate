@@ -2,8 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_html/shims/dart_ui_real.dart';
 
 const Duration _kMenuDuration = Duration(milliseconds: 300);
 const double _kMenuCloseIntervalEnd = 2.0 / 3.0;
@@ -136,6 +134,7 @@ class _PopupMenuRouteLayout extends SingleChildLayoutDelegate {
 
     // Find the ideal vertical position.
     double y;
+    // ignore: unnecessary_null_comparison
     if (selectedItemOffset == null) {
       y = position.top;
     } else {
@@ -152,6 +151,7 @@ class _PopupMenuRouteLayout extends SingleChildLayoutDelegate {
       x = position.left;
     } else {
       // Menu button is equidistant from both edges, so grow in reading direction.
+      // ignore: unnecessary_null_comparison
       assert(textDirection != null);
       switch (textDirection) {
         case TextDirection.rtl:
@@ -326,8 +326,11 @@ Future<T?> showMenu<T>({
   double? height,
   String? semanticLabel,
 }) {
+  // ignore: unnecessary_null_comparison
   assert(context != null);
+  // ignore: unnecessary_null_comparison
   assert(position != null);
+  // ignore: unnecessary_null_comparison
   assert(items != null && items.isNotEmpty);
   assert(debugCheckHasMaterialLocalizations(context));
   String label = semanticLabel ?? '';
@@ -442,6 +445,7 @@ class CustomPopupMenuButton<T> extends StatefulWidget {
     this.offset = Offset.zero,
     this.enabled = true,
     this.height,
+  // ignore: unnecessary_null_comparison
   })  : assert(itemBuilder != null),
         assert(offset != null),
         assert(enabled != null),
@@ -521,6 +525,7 @@ class CustomPopupMenuButtonState<T> extends State<CustomPopupMenuButton<T>> {
     final RenderBox overlay = Overlay.of(context)?.context.findRenderObject() as RenderBox;
     final RelativeRect position = RelativeRect.fromRect(
       Rect.fromPoints(
+        // ignore: prefer_const_constructors
         button.localToGlobal(widget.offset ?? Offset(0, 0), ancestor: overlay),
         button.localToGlobal(button.size.bottomRight(Offset.zero), ancestor: overlay),
       ),

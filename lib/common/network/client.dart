@@ -13,6 +13,7 @@ class Client {
 
   factory Client() => _instance;
 
+  // ignore: unused_field
   Dio? _dio;
 
   Services get service => Services(_build(), baseUrl: _baseUrl);

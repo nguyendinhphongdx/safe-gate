@@ -79,8 +79,8 @@ class BodyPickerPage extends GetWidget<BodyPickerController> {
               // const SizedBox(height: 8),
               Obx(
                 () => ButtonDialog(
-                  cancelLabel: 'Thoát',
-                  confirmLabel: 'Áp dụng',
+                  cancelLabel: KeyLanguage.exit.tr,
+                  confirmLabel:  KeyLanguage.apply.tr,
                   showShadow: false,
                   confirmColor: ColorResource.primary,
                   confirmTextColor: Colors.white,

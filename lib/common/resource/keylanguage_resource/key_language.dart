@@ -4,10 +4,58 @@ class KeyLanguage {
   static const String password = 'password';
   static const String repeat = 'repeat';
   static const String login = 'login';
+  //  country
+  static const String language_vi = 'language_vi';
+  static const String language_en = 'language_en';
+  static const String vn = 'vn';
+  static const String uk = 'uk';
+  static const String us = 'us';
+  // datetime
+  static const String mon = 'mon';
+  static const String tue = 'tue';
+  static const String wed = 'wed';
+  static const String thu = 'thu';
+  static const String fri = 'fri';
+  static const String sat = 'sat';
+  static const String sun = 'sun';
+  static const String month = 'month';
+  static const String year = 'year';
+  // account
+  static const String signAccount = 'signAccount';
+  static const String signUp = 'signUp';
+  static const String doSignUpAccount = 'doSignUpAccount';
+  static const String noAccount = 'noAccount';
+  static const String sendOtpAgain = 'sendOtpAgain';
+  static const String logout = 'logout';
+  static const String avatar_name = 'avatar_name';
+  // action
+  static const String onback = 'onback';
   static const String confirm = 'confirm';
+  static const String apply = 'apply';
+  // status
+  static const String success = 'success';
+  static const String nodata = 'nodata';
+  // widget wifi
+  static const String encode = 'encode';
   static const String wifi_name = 'wifi_name';
+  static const String send_request = 'send_request';
+  static const String scan_in_network = 'scan_in_network';
+  static const String application_initialization = 'application_initialization';
+  static const String device_connecting = 'device_connecting';
+  static const String network_scanning = 'network_scanning';
+  static const String wi_fi_configuration = 'wi_fi_configuration';
+  static const String advanced_option = 'advanced_option';
+  static const String frequency = 'frequency';
+  static const String network_bandwidth = 'network_bandwidth';
+  static const String hind_wifi = 'hind_wifi';
+  static const String collapse = 'collapse';
+  static const String access_permission = 'access_permission';
+  static const String device_code = 'device_code';
   static const String new_connection = 'new_connection';
   static const String assign_connection = 'assign_connection';
+  // widget menu
+  static const String group = 'group';
+  static const String app_a_web = 'app_a_web';
   static const String timezone = 'Time zone';
   static const String confirmPwd = 'confirmPwd';
   static const String cancel = 'cancel';
@@ -19,8 +67,6 @@ class KeyLanguage {
   static const String question_image_gallery = 'question_image_gallery';
   static const String question_storage = 'question_storage';
   static const String setting = 'setting';
-  static const String language_vi = 'language_vi';
-  static const String language_en = 'language_en';
   static const String images = 'images';
   static const String viewMore = 'viewMore';
   static const String re_open = 're_open';
@@ -40,9 +86,6 @@ class KeyLanguage {
   static const String email = 'Email';
   static const String assertNoEmpty = 'assertNoEmpty';
   static const String valueNotEmail = 'valueNotEmail';
-  static const String vn = 'vn';
-  static const String uk = 'uk';
-  static const String us = 'us';
   static const String assertPwd = 'assetPwd';
   static const String assertRepeatPwd = 'assetRepeatPwd';
   static const String options = 'Options';
@@ -54,10 +97,7 @@ class KeyLanguage {
   static const String wifi_type = 'wifi_type';
   static const String enterPassword = 'enterPassword';
   static const String forgotPassword = 'forgotPassword';
-  static const String signUp = 'signUp';
-  static const String signAccount = 'signAccount';
   static const String askRegister = 'askRegister';
-  static const String noAccount = 'noAccount';
   static const String device = 'device';
   static const String device_info = 'device_info';
   static const String device_name = 'device_name';
@@ -133,7 +173,6 @@ class KeyLanguage {
   static const String user_interface = 'user_interface';
   static const String alert_config = 'alert_config';
   static const String user_mode_config = 'user_mode_config';
-  static const String logout = 'logout';
   static const String notification = 'notification';
   static const String exit_app = 'exit_app';
   static const String report = 'report';
@@ -160,13 +199,6 @@ class KeyLanguage {
   static const String extend_package = 'extend_package';
   static const String select_the_package = 'select_the_package';
   static const String we_will_contact_you = 'we_will_contact_you';
-  static const String send_request = 'send_request';
-  static const String scan_in_network = 'scan_in_network';
-  static const String application_initialization = 'application_initialization';
-  static const String device_connecting = 'device_connecting';
-  static const String network_scanning = 'network_scanning';
-  static const String wi_fi_configuration = 'wi_fi_configuration';
-  static const String advanced_option = 'advanced_option';
   static const String exit = 'exit';
   static const String resume = 'resume';
   static const String set_device_name = 'set_device_name';
@@ -197,14 +229,5 @@ class KeyLanguage {
   static const String monitor = 'monitor';
   static const String config_time_use = 'config_time_use';
   static const String ask_sure_delete = 'ask_sure_delete';
-  static const String mon = 'mon';
-  static const String tue = 'tue';
-  static const String wed = 'wed';
-  static const String thu = 'thu';
-  static const String fri = 'fri';
-  static const String sat = 'sat';
-  static const String sun = 'sun';
   static const String add_device_used = 'add_device_used';
-
-
 }

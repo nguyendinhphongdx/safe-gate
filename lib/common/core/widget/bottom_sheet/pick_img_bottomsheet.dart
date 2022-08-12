@@ -1,6 +1,3 @@
-import 'dart:io';
-
-import 'package:base_pm2/common/core/app_core.dart';
 import 'package:base_pm2/common/core/sys/permission_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -8,8 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
-
-import '../../../resource/keylanguage_resource/key_language.dart';
+import 'package:base_pm2/common/resource/keylanguage_resource/key_language.dart';
 
 class PickImgBottomSheetDialog extends StatelessWidget {
   const PickImgBottomSheetDialog({Key? key}) : super(key: key);

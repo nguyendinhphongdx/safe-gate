@@ -1,21 +1,19 @@
 import 'dart:io';
 import 'dart:ui';
-
-import 'package:base_pm2/common/core/app_core.dart';
 import 'package:base_pm2/common/helper/app_common.dart';
 import 'package:base_pm2/common/local_storage/app_storage.dart';
+import 'package:base_pm2/common/resource/keylanguage_resource/en_us.dart';
+import 'package:base_pm2/common/resource/keylanguage_resource/vi_vn.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-
-import 'en_us.dart';
-import 'vi_vn.dart';
 
 class LocalizationService extends Translations {
   static final locale = _getLocaleFromLanguage();
 
   //static final locale = Get.locale;
 
-  static const fallbackLocale = Locale(LanguageCodeConstant.VI, LanguageCountryConstant.VI);
+  static const fallbackLocale =
+      Locale(LanguageCodeConstant.VI, LanguageCountryConstant.VI);
 
   static final langCodes = [LanguageCodeConstant.EN, LanguageCodeConstant.VI];
 
@@ -31,8 +29,8 @@ class LocalizationService extends Translations {
   }
 
   static Locale? _getLocaleFromLanguage({String? langCode}) {
-    String? languageCode =
-        LocalStorage().get<String>(StorageKey.LANGUAGE) ?? Intl.shortLocale(Platform.localeName);
+    String? languageCode = LocalStorage().get<String>(StorageKey.LANGUAGE) ??
+        Intl.shortLocale(Platform.localeName);
     var lang = langCode ?? languageCode;
 
     LocalStorage().put(StorageKey.LANGUAGE, lang);

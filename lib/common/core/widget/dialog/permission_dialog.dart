@@ -45,10 +45,12 @@ class PermissionDialog extends StatelessWidget {
             content: Text(content),
             actions: [
               CupertinoDialogAction(
+                // ignore: prefer_const_constructors
                 child: Text(KeyLanguage.cancel),
                 onPressed: () => Navigator.pop(context),
               ),
               CupertinoDialogAction(
+                // ignore: prefer_const_constructors
                 child: Text(KeyLanguage.setting),
                 onPressed: () {
                   Navigator.pop(context);

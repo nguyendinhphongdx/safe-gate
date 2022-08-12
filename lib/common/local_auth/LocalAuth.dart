@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, unused_field, unused_catch_clause
+
 import 'package:base_pm2/common/helper/utils.dart';
 import 'package:base_pm2/common/resource/keylanguage_resource/key_language.dart';
 import 'package:flutter/services.dart';
@@ -93,6 +95,7 @@ class LocalAuth {
       // Utils.showToast("Unable to verify identity. Please try again later!");
       listener.authenticated(false);
     }
+    // ignore: avoid_print
     print("Local Auth: $message");
   }
 }

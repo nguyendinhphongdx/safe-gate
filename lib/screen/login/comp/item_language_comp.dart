@@ -1,7 +1,6 @@
 import 'package:base_pm2/common/core/app_core.dart';
-import 'package:base_pm2/common/core/theme/theme_manager.dart';
+import 'package:base_pm2/common/helper/app_common.dart';
 import 'package:base_pm2/common/resource/app_resource.dart';
-import 'package:base_pm2/common/resource/color_resource.dart';
 import 'package:flutter/material.dart';
 
 class ItemLanguageComp extends StatelessWidget {
@@ -29,7 +28,7 @@ class ItemLanguageComp extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(left:2.0),
                   child: Text(
-                    isVietnamese ? '' : 'EN',
+                    isVietnamese ? '' : LanguageCountryConstant.EN,
                     style: appStyle.textTheme.bodyText2
                         ?.apply(color: Colors.white),
                   ),
@@ -61,7 +60,7 @@ class ItemLanguageComp extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(right:2.0),
                   child: Text(
-                    isVietnamese ? 'VN' : '',
+                    isVietnamese ? LanguageCountryConstant.VI : '',
                     style: appStyle.textTheme.bodyText2
                         ?.apply(color: Colors.white),
                   ),

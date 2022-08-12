@@ -1,7 +1,6 @@
 import 'package:base_pm2/common/core/app_core.dart';
 import 'package:base_pm2/common/core/widget/avatar/avatar_pick_comp.dart';
 import 'package:base_pm2/common/helper/app_common.dart';
-import 'package:base_pm2/common/helper/constant.dart';
 import 'package:base_pm2/common/page_manager/route_path.dart';
 import 'package:base_pm2/common/resource/app_resource.dart';
 import 'package:base_pm2/screen/account/account_controller.dart';
@@ -24,7 +23,7 @@ class MediumLayout extends GetView<AccountController> {
             iconSize: Size(28, 28),
             editPosition: Offset(4, 4),
             inkwellPadding: EdgeInsets.zero,
-            name: 'Con gái',
+            name: KeyLanguage.avatar_name,
           ),
           const SizedBox(height: 20),
           Container(
@@ -68,7 +67,7 @@ class MediumLayout extends GetView<AccountController> {
         title: KeyLanguage.change_password.tr,
         onPressed: () async {
           Get.toNamed(RoutePath.OTP,
-              parameters: OtpArgs(otpType: OtpType.OTP_RESET_PASSWORD, phoneNumber: '0943574556').toJson());
+              parameters: OtpArgs(otpType: OtpType.OTP_RESET_PASSWORD, phoneNumber: Account.HASH_PHONENUMBER).toJson());
         },
       );
 

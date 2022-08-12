@@ -1,7 +1,9 @@
 import 'package:base_pm2/common/core/app_core.dart';
 import 'package:base_pm2/common/core/theme/theme_manager.dart';
 import 'package:base_pm2/common/resource/app_resource.dart';
+import 'package:base_pm2/common/resource/keylanguage_resource/key_language.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class BaseErrorDialog extends StatelessWidget {
   final String? title;
@@ -31,7 +33,7 @@ class BaseErrorDialog extends StatelessWidget {
     return WillPopScope(
       onWillPop: () async => willPopScope ?? false,
       child: AlertDialog(
-        title: Text(title ?? 'Thông báo',
+        title: Text(title ?? KeyLanguage.notification.tr,
             style: appStyle.textTheme.headline3
                 ?.apply(color: ColorResource.primary)),
         content: Text(content ?? '', style: appStyle.textTheme.bodyText1),
@@ -45,7 +47,7 @@ class BaseErrorDialog extends StatelessWidget {
                     mCancel?.call();
                   },
                   child: Text(
-                    textButtonCancel ?? 'Hủy',
+                    textButtonCancel ?? KeyLanguage.cancel.tr,
                     style: const TextStyle(
                         fontWeight: FontWeight.w700, fontSize: 16,color: ColorResource.grey),
                   ),
@@ -58,7 +60,7 @@ class BaseErrorDialog extends StatelessWidget {
                     mConfirm?.call();
                   },
                   child: Text(
-                    textButtonConfirm ?? 'Đồng ý',
+                    textButtonConfirm ?? KeyLanguage.confirm.tr,
                     style: const TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 16,

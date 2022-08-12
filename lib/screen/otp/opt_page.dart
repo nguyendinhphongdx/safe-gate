@@ -100,7 +100,7 @@ class OtpPage extends GetWidget<OtpController> {
                     children: [
                       Text(
                           controller.currentTime.value != 0
-                              ? 'Gửi lại mã OTP trong: '
+                              ? KeyLanguage.sendOtpAgain.tr
                               : KeyLanguage.not_received_otp.tr,
                           style: appStyle.textTheme.bodyText1
                               ?.apply(color: ColorResource.tabIndicator)),

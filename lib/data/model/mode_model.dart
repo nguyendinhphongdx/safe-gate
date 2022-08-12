@@ -1,5 +1,3 @@
-import 'package:base_pm2/common/resource/keylanguage_resource/vi_vn.dart';
-// import 'package:base_pm2/data/model/profile_model.dart';
 import 'package:get/get.dart';
 
 class ModeModel {

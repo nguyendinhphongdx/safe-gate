@@ -1,5 +1,7 @@
 import 'package:base_pm2/common/core/app_core.dart';
+import 'package:base_pm2/common/resource/keylanguage_resource/key_language.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SecondTabBarComp extends StatelessWidget {
   const SecondTabBarComp({Key? key, this.controller}) : super(key: key);
@@ -19,8 +21,8 @@ class SecondTabBarComp extends StatelessWidget {
               color: appStyle.dividerColor,
             )),
         TabBar(controller: controller, indicatorColor: Colors.white, tabs: [
-          Tab(text: 'Ứng dụng và web'),
-          Tab(text: 'Nhóm'),
+          Tab(text: KeyLanguage.app_a_web.tr),
+          Tab(text: KeyLanguage.group.tr),
         ]),
       ],
     );

@@ -29,32 +29,38 @@ class AddWifiDL extends GetWidget<AddWifiController> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 const SizedBox(height: 24),
-                Text('Khởi tạo ứng dụng',
+                Text(KeyLanguage.application_initialization.tr,
                     style: appStyle.textTheme.bodyText1?.copyWith(
-                        fontSize: 16, color: ColorResource.tabIndicator, fontWeight: FontWeight.w600)),
+                        fontSize: 16,
+                        color: ColorResource.tabIndicator,
+                        fontWeight: FontWeight.w600)),
                 const SizedBox(height: 8),
                 InkWellComp(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'Cấu hình Wifi',
-                          style: appStyle.textTheme.bodyText1
-                              ?.copyWith(color: ColorResource.primary, fontWeight: FontWeight.w600),
+                          KeyLanguage.wi_fi_configuration.tr,
+                          style: appStyle.textTheme.bodyText1?.copyWith(
+                              color: ColorResource.primary,
+                              fontWeight: FontWeight.w600),
                         ),
                         const SizedBox(width: 8),
-                        const Icon(Icons.add_circle_rounded, size: 26, color: ColorResource.primary)
+                        const Icon(Icons.add_circle_rounded,
+                            size: 26, color: ColorResource.primary)
                       ],
                     ),
                     onTap: controller.onAddConfig),
                 const SizedBox(height: 12),
                 Container(
-                  constraints: BoxConstraints(maxHeight: Get.height*0.6),
+                  constraints: BoxConstraints(maxHeight: Get.height * 0.6),
                   child: SingleChildScrollView(
                     child: Obx(
                       () => Column(
                         children: [
-                          ...controller.bodyModels.mapIndexed<Widget>(_buildItem).toList(),
+                          ...controller.bodyModels
+                              .mapIndexed<Widget>(_buildItem)
+                              .toList(),
                         ],
                       ),
                     ),

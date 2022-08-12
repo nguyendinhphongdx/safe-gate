@@ -16,8 +16,11 @@ class BodySuccessfulSearchComp extends StatelessWidget {
       children: [
         iconFindDeviceComp,
         const SizedBox(height: 8),
-        textDeviceComp(title: 'Mã thiết bị', value: 'SG68686768-XZ'),
-        textDeviceComp(title: 'Ver', value: 'Standard - V1.0'),
+        textDeviceComp(
+            title: KeyLanguage.device_code.tr,
+            value: HassData.HASH_DEVICE_CODE),
+        textDeviceComp(
+            title: KeyLanguage.version.tr, value: HassData.HASH_DEVICE_VERSION),
         const SizedBox(height: 22),
         textSetNameDeviceComp,
         const SizedBox(height: 16),
@@ -26,49 +29,54 @@ class BodySuccessfulSearchComp extends StatelessWidget {
     );
   }
 
-
   Widget get iconFindDeviceComp => Container(
-    padding: const EdgeInsets.all(10),
-    width: 52,
-    height: 52,
-    decoration: BoxDecoration(color: ColorResource.primary, borderRadius: BorderRadius.circular(100)),
-    child: const SvgComp(
-      url: ImageResource.ic_devices,
-      width: 30,
-      height: 30,
-    ),
-  );
-
-
+        padding: const EdgeInsets.all(10),
+        width: 52,
+        height: 52,
+        decoration: BoxDecoration(
+            color: ColorResource.primary,
+            borderRadius: BorderRadius.circular(100)),
+        child: const SvgComp(
+          url: ImageResource.ic_devices,
+          width: 30,
+          height: 30,
+        ),
+      );
 
   Widget textDeviceComp({required String title, required String value}) => Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-      Text('$title: ',
-          style: appStyle.textTheme.bodyText2?.copyWith(color: ColorResource.titleAppBarWhiteScreen,fontWeight: FontWeight.w600)),
-      Text(value,
-          style: appStyle.textTheme.bodyText2?.copyWith(color: ColorResource.titleAppBarWhiteScreen))
-    ],
-  );
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('$title: ',
+              style: appStyle.textTheme.bodyText2?.copyWith(
+                  color: ColorResource.titleAppBarWhiteScreen,
+                  fontWeight: FontWeight.w600)),
+          Text(value,
+              style: appStyle.textTheme.bodyText2
+                  ?.copyWith(color: ColorResource.titleAppBarWhiteScreen))
+        ],
+      );
 
   Widget get textSetNameDeviceComp => Text(
-    KeyLanguage.set_device_name.tr,
-    style: appStyle.textTheme.bodyText1?.copyWith(color: ColorResource.primary,fontWeight: FontWeight.w600),
-  );
+        KeyLanguage.set_device_name.tr,
+        style: appStyle.textTheme.bodyText1?.copyWith(
+            color: ColorResource.primary, fontWeight: FontWeight.w600),
+      );
 
   Widget get textFieldSetNameComp => Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-    child: TextFieldComp(
-      hint: 'Home - Phòng ngủ',padV: 6,
-      padH: 0,
-
-      fillColor: Colors.transparent,
-      cursorColor: ColorResource.tabIndicator,
-      borderColor: ColorResource.tabIndicator,
-      style: appStyle.textTheme.bodyText2?.copyWith(color: ColorResource.tabIndicator),
-      hintStyle: appStyle.textTheme.bodyText2?.copyWith(color: ColorResource.tabIndicator),
-      isUnderLine: true,
-      colorUnderLine: ColorResource.tabIndicator,
-    ),
-  );
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        child: TextFieldComp(
+          hint: 'Home - Phòng ngủ',
+          padV: 6,
+          padH: 0,
+          fillColor: Colors.transparent,
+          cursorColor: ColorResource.tabIndicator,
+          borderColor: ColorResource.tabIndicator,
+          style: appStyle.textTheme.bodyText2
+              ?.copyWith(color: ColorResource.tabIndicator),
+          hintStyle: appStyle.textTheme.bodyText2
+              ?.copyWith(color: ColorResource.tabIndicator),
+          isUnderLine: true,
+          colorUnderLine: ColorResource.tabIndicator,
+        ),
+      );
 }

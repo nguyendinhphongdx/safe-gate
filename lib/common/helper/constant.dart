@@ -49,12 +49,25 @@ class LanguageCodeConstant {
 
 class LanguageCountryConstant {
   static const String VI = 'VN';
-  static const String EN = 'US';
+  static const String EN = 'EN';
 }
 
 class ThemeModeConstant {
   static const String DARK = 'dark';
   static const String LIGHT = 'light';
+}
+class CountryCode {
+  // vietnam
+  static const String VN_CODE_DETAIL = 'Việt Nam (+84)';
+  static const String VN_CODE = '+84';
+  static const String UK_CODE = '+44';
+  static const String US_CODE = '+1';
+}
+
+class ArenaCode {
+  static const String VIETNAM = 'VN'; // Lịch sử truy cập
+  static const String UK = 'UK'; // Lịch sử vi phạm
+  static const String US = 'US'; // Lịch sử vi phạm
 }
 
 class TypeDialog {
@@ -72,6 +85,7 @@ class UserDeviceStatus {
   static const int CONNECT = 1;
 }
 
+
 class OtpType {
   static const String OTP_SIGN_UP = '0'; // Otp cho đăng ký
   static const String OTP_RESET_PASSWORD = '1'; // Otp cho reset mật khẩu
@@ -87,12 +101,6 @@ class ModeType {
   static const String LIMIT = 'deny';
   static const String UN_LIMIT = 'allow';
   static const String MONITOR = 'report';
-}
-
-class ArenaCode {
-  static const String VIETNAM = 'VN'; // Lịch sử truy cập
-  static const String UK = 'UK'; // Lịch sử vi phạm
-  static const String US = 'US'; // Lịch sử vi phạm
 }
 
 class DNSMode {
@@ -136,4 +144,11 @@ class ReportBy {
 class DeviceType {
   static const int NONE = 0;
   static const int MANAGED = 2;
+}
+class Account{
+    static const String HASH_PHONENUMBER = '0943574556';
+}
+class HassData {
+  static const String HASH_DEVICE_CODE = 'SG68686768-XZ';
+  static const String HASH_DEVICE_VERSION = 'Standard - V1.0';
 }

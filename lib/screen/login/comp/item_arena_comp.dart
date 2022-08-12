@@ -1,5 +1,6 @@
 import 'package:base_pm2/common/core/theme/theme_manager.dart';
 import 'package:base_pm2/common/core/widget/image/image_viewer.dart';
+import 'package:base_pm2/common/helper/app_common.dart';
 import 'package:flutter/material.dart';
 
 class ItemArenaComp extends StatelessWidget {
@@ -17,7 +18,7 @@ class ItemArenaComp extends StatelessWidget {
             height: 22,),
           const SizedBox(width: 8),
           Text(
-            title ?? 'Việt Nam (+84)',
+            title ?? CountryCode.VN_CODE_DETAIL,
             style: appStyle.textTheme.bodyText1?.apply(color: Colors.black.withOpacity(.5)),
           )
         ],

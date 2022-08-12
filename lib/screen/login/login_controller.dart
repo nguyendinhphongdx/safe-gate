@@ -20,7 +20,7 @@ class LoginController extends BaseController implements LocalAuthListener {
   final GlobalKey<PopupMenuButtonState> popupMenu = GlobalKey<PopupMenuButtonState>();
   List<String> languageList = [];
   RxBool showLanguage = false.obs;
-  RxString currentArena = '+84'.obs;
+  RxString currentArena = CountryCode.VN_CODE.obs;
 
   @override
   Future<void> initialData() {
@@ -81,9 +81,9 @@ class LoginController extends BaseController implements LocalAuthListener {
   }
 
   void onMenuSelected(value) {
-    if (value == ArenaCode.VIETNAM) currentArena.value = '+84';
-    if (value == ArenaCode.UK) currentArena.value = '+44';
-    if (value == ArenaCode.US) currentArena.value = '+1';
+    if (value == ArenaCode.VIETNAM) currentArena.value = CountryCode.VN_CODE;
+    if (value == ArenaCode.UK) currentArena.value = CountryCode.UK_CODE;
+    if (value == ArenaCode.US) currentArena.value = CountryCode.US_CODE;
   }
 }
 

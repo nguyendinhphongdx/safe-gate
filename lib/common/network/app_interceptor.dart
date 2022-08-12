@@ -1,5 +1,4 @@
 import 'package:base_pm2/common/core/sys/base_function.dart';
-import 'package:base_pm2/common/helper/app_common.dart';
 import 'package:base_pm2/common/network/interceptor_catch.dart';
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';

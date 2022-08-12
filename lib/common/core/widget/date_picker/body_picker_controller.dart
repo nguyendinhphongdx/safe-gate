@@ -1,8 +1,6 @@
-import 'package:base_pm2/common/core/app_core.dart';
 import 'package:base_pm2/common/core/sys/base_controller.dart';
 import 'package:base_pm2/common/core/widget/date_picker/body_picker.dart';
 import 'package:base_pm2/common/helper/app_common.dart';
-import 'package:base_pm2/common/helper/view_utils.dart';
 import 'package:get/get.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 

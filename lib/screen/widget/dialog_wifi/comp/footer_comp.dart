@@ -1,6 +1,7 @@
 import 'package:base_pm2/common/core/app_core.dart';
 import 'package:base_pm2/common/core/theme/theme_manager.dart';
 import 'package:base_pm2/common/resource/color_resource.dart';
+import 'package:base_pm2/common/resource/keylanguage_resource/key_language.dart';
 import 'package:base_pm2/screen/widget/dialog_wifi/add_wifi_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,7 +23,7 @@ class FooterComp extends GetView<AddWifiController> {
 
                   child: Center(
                     child: Text(
-                      'Quay lại',
+                      KeyLanguage.onback.tr,
                       style: appStyle.textTheme.bodyText1
                           ?.copyWith(color: ColorResource.tabIndicator, fontWeight: FontWeight.w600),
                     ),
@@ -36,7 +37,7 @@ class FooterComp extends GetView<AddWifiController> {
                 paddingAll: 12,
                 child: Center(
                   child: Text(
-                    'Hoàn thành',
+                    KeyLanguage.success.tr,
                     style: appStyle.textTheme.bodyText1
                         ?.copyWith(color: ColorResource.tabIndicator, fontWeight: FontWeight.w600),
                   ),

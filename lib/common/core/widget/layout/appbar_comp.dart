@@ -2,8 +2,6 @@ import 'package:base_pm2/common/core/app_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../button/icon_button_comp.dart';
-
 class  AppBarComp extends PreferredSize {
   final dynamic title;
   final TextStyle? style;
@@ -54,6 +52,7 @@ class  AppBarComp extends PreferredSize {
                 style: style ?? appStyle.textTheme.bodyText1?.copyWith(fontSize: 16,fontWeight: FontWeight.w600),
                 overflow: TextOverflow.ellipsis,
               ),
+        // ignore: prefer_const_constructors
         flexibleSpace: flexibleSpace ?? SizedBox(),
         backgroundColor: backgroundColor ?? Colors.transparent,
         leading: Visibility(

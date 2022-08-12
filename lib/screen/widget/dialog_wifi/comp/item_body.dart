@@ -1,5 +1,6 @@
 import 'package:base_pm2/common/core/app_core.dart';
 import 'package:base_pm2/common/resource/app_resource.dart';
+import 'package:base_pm2/common/resource/keylanguage_resource/key_language.dart';
 import 'package:base_pm2/data/model/widget/body_model.dart';
 import 'package:base_pm2/screen/widget/dialog_wifi/add_wifi_controller.dart';
 import 'package:base_pm2/screen/widget/dialog_wifi/comp/drop_down_device.dart';
@@ -39,11 +40,11 @@ class ItemBody extends GetView<AddWifiController> {
             child: Column(
               children: [
                 EditTextDevice(
-                    controller: bodyModel?.wifiName, hint: 'Tên Wifi (SSID)', isInvisiblePassword: false),
+                    controller: bodyModel?.wifiName, hint: KeyLanguage.wifi_name.tr, isInvisiblePassword: false),
                 const SizedBox(height: 22),
                 Obx(() => EditTextDevice(
                     controller: bodyModel?.wifiPass,
-                    hint: 'Mật khẩu',
+                    hint: KeyLanguage.password.tr,
                     iconColor: bodyModel?.isNotEmptyPass?.value ?? false
                         ? ColorResource.primary
                         : ColorResource.primary.withOpacity(.5),
@@ -56,7 +57,7 @@ class ItemBody extends GetView<AddWifiController> {
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            'Tuỳ chọn nâng cao',
+                            KeyLanguage.advanced_option.tr,
                             textAlign: TextAlign.center,
                             style: appStyle.textTheme.bodyText2?.copyWith(color: ColorResource.primary),
                           ),
@@ -69,7 +70,7 @@ class ItemBody extends GetView<AddWifiController> {
                         Obx(
                           () => DropDownDevice(
                             currentValue: bodyModel?.wifiHash?.value,
-                            hint: 'Mã hóa',
+                            hint: KeyLanguage.encode.tr,
                             options: controller.hashOptions,
                             onSelected: (v) {
                               bodyModel?.wifiHash?.value = (v as BaseOptionDropdown).name ?? '';
@@ -81,7 +82,7 @@ class ItemBody extends GetView<AddWifiController> {
                         Obx(
                           () => DropDownDevice(
                             currentValue: bodyModel?.frequency?.value,
-                            hint: 'Tần số',
+                            hint: KeyLanguage.frequency.tr,
                             options: controller.frequenlyOptions,
                             onSelected: (v) {
                               bodyModel?.frequency?.value = (v as BaseOptionDropdown).name ?? '';
@@ -92,7 +93,7 @@ class ItemBody extends GetView<AddWifiController> {
                         Obx(
                           () => DropDownDevice(
                             currentValue: bodyModel?.bandwidth?.value,
-                            hint: 'Băng thông',
+                            hint: KeyLanguage.network_bandwidth.tr,
                             options: controller.brandOptions,
                             onSelected: (v) {
                               bodyModel?.bandwidth?.value = (v as BaseOptionDropdown).name ?? '';
@@ -101,13 +102,13 @@ class ItemBody extends GetView<AddWifiController> {
                         ),
                         const SizedBox(height: 22),
                         Obx(() => SwitchDevice(
-                              title: 'Không hiển thị tên Wifi',
+                              title: KeyLanguage.hind_wifi.tr,
                               onChangeStatus: () => controller.onChangeNameStatus(bodyModel),
                               isActive: bodyModel?.noShowNameWifi?.value ?? false,
                             )),
                         const SizedBox(height: 32),
                         Obx(() => SwitchDevice(
-                              title: 'Cho phép sử dụng',
+                              title: KeyLanguage.access_permission.tr,
                               onChangeStatus: () => controller.onChangeUseStatus(bodyModel),
                               isActive: bodyModel?.useEnable?.value ?? false,
                             )),
@@ -116,7 +117,7 @@ class ItemBody extends GetView<AddWifiController> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
-                              'Thu gọn',
+                              KeyLanguage.collapse.tr,
                               style: appStyle.textTheme.bodyText2?.copyWith(color: ColorResource.primary),
                             ),
                           ),

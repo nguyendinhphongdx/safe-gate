@@ -25,8 +25,8 @@ class Application extends StatelessWidget {
         locale: LocalizationService.locale,
         getPages: listPage,
         supportedLocales: const <Locale>[
-          Locale('vi', 'VN'),
-          Locale('en', 'EN'),
+          Locale(LanguageCodeConstant.VI, LanguageCountryConstant.VI),
+          Locale(LanguageCodeConstant.EN, LanguageCountryConstant.EN),
         ],
         localizationsDelegates: const <LocalizationsDelegate<dynamic>>[
           GlobalMaterialLocalizations.delegate,

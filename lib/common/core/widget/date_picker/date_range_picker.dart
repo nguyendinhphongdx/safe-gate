@@ -1,6 +1,5 @@
 import 'package:base_pm2/common/core/app_core.dart';
 import 'package:base_pm2/common/resource/app_resource.dart';
-import 'package:cr_calendar/cr_calendar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
